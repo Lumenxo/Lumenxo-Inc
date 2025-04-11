@@ -1025,6 +1025,44 @@
             .contact-form {
                 margin-top: 30px;
             }
+            @keyframes fadeInUp {
+                0% { opacity: 0; transform: translateY(30px); }
+                100% { opacity: 1; transform: translateY(0); }
+              }
+            
+              @keyframes fadeInLeft {
+                0% { opacity: 0; transform: translateX(-30px); }
+                100% { opacity: 1; transform: translateX(0); }
+              }
+            
+              @keyframes fadeInRight {
+                0% { opacity: 0; transform: translateX(30px); }
+                100% { opacity: 1; transform: translateX(0); }
+              }
+            
+              @keyframes zoomIn {
+                0% { transform: scale(0.5); opacity: 0; }
+                100% { transform: scale(1); opacity: 1; }
+              }
+            
+              /* Hover and Focus Animations */
+              input:focus, textarea:focus {
+                border-color: #00ffe7;
+                outline: none;
+                box-shadow: 0 0 5px #00ffe7;
+                transition: all 0.3s ease;
+              }
+            
+              button:hover {
+                background-color: #009c7f;
+                transform: scale(1.05);
+                box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+              }
+            
+              .contact-info-card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+              }
         }
     </style>
 </head>
@@ -1558,92 +1596,78 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section-padding" id="contact">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <div class="section-title" data-aos="fade-up">
-                        <h2>Contact Us</h2>
-                        <p>Get in touch with our team to discuss your project requirements and how we can help you
-                            achieve your business goals.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="contact-info-card mb-4">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4>Our Location</h4>
-                        <p>1234 Innovation Drive, Tech Park<br>San Francisco, CA 94107</p>
-                    </div>
-                    <div class="contact-info-card mb-4">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h4>Email Us</h4>
-                        <p>info@lumenxo.com<br>support@lumenxo.com</p>
-                    </div>
-                    <div class="contact-info-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <h4>Call Us</h4>
-                        <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
-                    </div>
-                </div>
-                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Name" required
-                                        aria-label="Your Name">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Your Email" required
-                                        aria-label="Your Email">
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" class="form-control" placeholder="Subject" required
-                                        aria-label="Subject">
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control" rows="6" placeholder="Your Message" required
-                                        aria-label="Your Message"></textarea>
-                                </div>
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary mt-3">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+<!-- Contact Us Section -->
+<section id="contact" style="background: linear-gradient(145deg, #0a0a0a, #121212); padding: 80px 0; color: #ffffff; font-family: 'Poppins', sans-serif;">
+    <div style="max-width: 1200px; margin: auto; padding: 0 20px;">
+      
+      <!-- Section Title -->
+      <div style="text-align: center; margin-bottom: 50px;">
+        <h2 style="font-size: 40px; color: #00ffe7; letter-spacing: 1px;">Let’s Talk</h2>
+        <p style="color: #aaa; font-size: 18px; max-width: 700px; margin: 10px auto;">Want to build something extraordinary with us? Get in touch and let's create magic together.</p>
+      </div>
+  
+      <!-- Contact Content -->
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+  
+        <!-- Left Contact Info -->
+        <div style="flex: 1; min-width: 300px;">
+          <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 0 15px rgba(0,255,255,0.05);">
+            <h4 style="color: #00ffe7; font-size: 22px; margin-bottom: 10px;"><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i>Location</h4>
+            <p>Balasore, Odisha, India</p>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 0 15px rgba(0,255,255,0.05);">
+            <h4 style="color: #00ffe7; font-size: 22px; margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i>Email</h4>
+            <p>info@lumenxo.com<br>support@lumenxo.com</p>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 15px; padding: 30px; box-shadow: 0 0 15px rgba(0,255,255,0.05);">
+            <h4 style="color: #00ffe7; font-size: 22px; margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i>Phone</h4>
+            <p>+91 76569 18304</p>
+          </div>
         </div>
-    </section>
-
+  
+        <!-- Contact Form -->
+        <div style="flex: 1.5; min-width: 300px;">
+          <form style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; box-shadow: 0 0 15px rgba(0,255,255,0.1);">
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+              <input type="text" placeholder="Your Name" required style="flex: 1; padding: 15px; background-color: #1f1f1f; color: white; border: 1px solid #00ffe7; border-radius: 10px; font-size: 16px;">
+              <input type="email" placeholder="Your Email" required style="flex: 1; padding: 15px; background-color: #1f1f1f; color: white; border: 1px solid #00ffe7; border-radius: 10px; font-size: 16px;">
+              <input type="text" placeholder="Subject" required style="width: 100%; padding: 15px; background-color: #1f1f1f; color: white; border: 1px solid #00ffe7; border-radius: 10px; font-size: 16px;">
+              <textarea rows="6" placeholder="Your Message" required style="width: 100%; padding: 15px; background-color: #1f1f1f; color: white; border: 1px solid #00ffe7; border-radius: 10px; font-size: 16px;"></textarea>
+              <div style="text-align: center; width: 100%;">
+                <button type="submit" style="padding: 15px 40px; background-color: #00ffe7; color: #000; font-weight: 600; border: none; border-radius: 30px; font-size: 16px; cursor: pointer; transition: 0.3s;">
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Map Embed -->
+      <div style="margin-top: 60px; border-radius: 15px; overflow: hidden; box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102866.29657766898!2d86.83675769806804!3d21.489387302376887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1c5f84f036e035%3A0x5cd332bf1c70157c!2sBalasore%2C%20Odisha!5e1!3m2!1sen!2sin!4v1744406339302!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+  
+  
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="background-color: #212121; color: #ffffff; padding: 40px 0;">
         <div class="container footer-content">
             <div class="row">
-                <div class="col-lg-4 mb-5">
-                    <div class="footer-logo">
-                        <a href="#" class="d-flex align-items-center">
-                            <i class="fas fa-lightbulb me-2" style="font-size: 2rem; color: var(--primary);"></i>
-                            <span class="logo-text">LumenXo</span>
-                        </a>
+                <!-- Footer Logo and Social Media Links -->
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-logo d-flex align-items-center">
+                        <img src="img/lumenxxxxo.svg" alt="LumenXo Logo" width="36" height="36" class="me-2">
+                        <span class="logo-text" style="font-size: 1.8rem; color: #ffffff;">LumenXo</span>
                     </div>
-                    <p class="footer-text">Transforming ideas into digital reality through innovative software solutions
-                        that drive business growth and success.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                    <p class="footer-text" style="font-size: 14px; color: #b0b0b0; margin-top: 15px; line-height: 1.5;">Transforming ideas into digital reality through innovative software solutions that drive business growth and success.</p>
+                    <div class="footer-social" style="margin-top: 20px;">
+                        <a href="#" style="color: #ffffff; margin-right: 10px; font-size: 18px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="color: #ffffff; margin-right: 10px; font-size: 18px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: #ffffff; margin-right: 10px; font-size: 18px;"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" style="color: #ffffff; margin-right: 10px; font-size: 18px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: #ffffff; font-size: 18px;"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-5">
