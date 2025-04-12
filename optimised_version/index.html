@@ -1112,9 +1112,23 @@
             }
         }
     </style>
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false
+  });
+</script>
+
 </head>
 
 <body>
+    
     <!-- Preloader -->
     <!-- <div id="preloader">
         <div class="loader"></div>
@@ -2139,6 +2153,19 @@
             }
         });
     </script>
+    <!-- Put this in your main JS file or inside <script> at the bottom of body -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      });
+    });
+  </script>
+  
 </body>
 
 </html>
