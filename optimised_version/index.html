@@ -92,6 +92,244 @@
         }
 
         @media (max-width: 767px) {
+
+            /* Fix for the cube positioning and size */
+            .hero-3d-container {
+                width: 100%;
+                height: 200px;
+                margin: 0 auto 30px;
+                transform: scale(0.8);
+            }
+
+            .cube {
+                width: 180px;
+                height: 180px;
+            }
+
+            .cube-face {
+                width: 180px;
+                height: 180px;
+                font-size: 1rem;
+            }
+
+            .cube-face:nth-child(1) {
+                transform: translateZ(90px);
+            }
+
+            .cube-face:nth-child(2) {
+                transform: rotateY(180deg) translateZ(90px);
+            }
+
+            .cube-face:nth-child(3) {
+                transform: rotateY(90deg) translateZ(90px);
+            }
+
+            .cube-face:nth-child(4) {
+                transform: rotateY(-90deg) translateZ(90px);
+            }
+
+            .cube-face:nth-child(5) {
+                transform: rotateX(90deg) translateZ(90px);
+            }
+
+            .cube-face:nth-child(6) {
+                transform: rotateX(-90deg) translateZ(90px);
+            }
+
+            /* Fix for the hero section layout */
+            .hero-section {
+                padding: 100px 0 40px !important;
+                text-align: center;
+            }
+
+            /* Adjust the order of elements */
+            .hero-content {
+                order: 2;
+                margin-top: 20px;
+            }
+
+            .col-lg-6:last-child {
+                order: 1;
+            }
+
+            /* Improve the typography for mobile */
+            .hero-title {
+                font-size: 2rem !important;
+                line-height: 1.2;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
+            .hero-text {
+                font-size: 1rem !important;
+                margin-bottom: 25px;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Fix the buttons */
+            .hero-buttons {
+                justify-content: center;
+                margin: 0 auto;
+            }
+
+            /* Fix for the yellow underline */
+            .hero-title span::after {
+                bottom: 2px;
+                height: 4px;
+            }
+        }
+
+        /* Additional fixes for extra small screens */
+        @media (max-width: 575px) {
+            .hero-3d-container {
+                transform: scale(0.7);
+                height: 180px;
+            }
+
+            .hero-title {
+                font-size: 1.8rem !important;
+            }
+        }
+
+        /* Fixed header styling */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 0;
+            z-index: 1000;
+            background-color: rgba(11, 11, 14, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Logo container styling */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        /* Logo image styling */
+        .logo-image {
+            height: 32px;
+            margin-right: 8px;
+        }
+
+        /* Logo text styling */
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            margin-left: 5px;
+        }
+
+        @media (max-width: 767px) {
+
+            /* Fix for the cube positioning and size */
+            .hero-3d-container {
+                width: 100%;
+                height: 200px;
+                margin: 0 auto 30px;
+                transform: scale(0.8);
+            }
+
+            .cube {
+                width: 180px;
+                height: 180px;
+            }
+
+            .cube-face {
+                width: 180px;
+                height: 180px;
+                font-size: 1rem;
+            }
+
+            .cube-face:nth-child(1) {
+                transform: translateZ(90px);
+            }
+
+            .cube-face:nth-child(2) {
+                transform: rotateY(180deg) translateZ(90px);
+            }
+
+            .cube-face:nth-child(3) {
+                transform: rotateY(90deg) translateZ(90px);
+            }
+
+            .cube-face:nth-child(4) {
+                transform: rotateY(-90deg) translateZ(90px);
+            }
+
+            .cube-face:nth-child(5) {
+                transform: rotateX(90deg) translateZ(90px);
+            }
+
+            .cube-face:nth-child(6) {
+                transform: rotateX(-90deg) translateZ(90px);
+            }
+
+            /* Fix for the hero section layout */
+            .hero-section {
+                padding: 100px 0 40px !important;
+                text-align: center;
+            }
+
+            /* Adjust the order of elements */
+            .hero-content {
+                order: 2;
+                margin-top: 20px;
+            }
+
+            .col-lg-6:last-child {
+                order: 1;
+            }
+
+            /* Improve the typography for mobile */
+            .hero-title {
+                font-size: 2rem !important;
+                line-height: 1.2;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
+            .hero-text {
+                font-size: 1rem !important;
+                margin-bottom: 25px;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Fix the buttons */
+            .hero-buttons {
+                justify-content: center;
+                margin: 0 auto;
+            }
+
+            /* Fix for the yellow underline */
+            .hero-title span::after {
+                bottom: 2px;
+                height: 4px;
+            }
+        }
+
+        /* Additional fixes for extra small screens */
+        @media (max-width: 575px) {
+            .hero-3d-container {
+                transform: scale(0.7);
+                height: 180px;
+            }
+
+            .hero-title {
+                font-size: 1.8rem !important;
+            }
+        }
+
+        @media (max-width: 767px) {
             .hero-section {
                 padding: 120px 0 60px !important;
                 min-height: auto;
@@ -360,12 +598,54 @@
                 padding: 25px;
             }
 
-            /* Back to top button */
             .back-to-top {
-                bottom: 15px;
-                right: 15px;
-                width: 40px;
-                height: 40px;
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                width: 50px;
+                height: 50px;
+                background: var(--primary);
+                color: var(--dark);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                z-index: 999;
+                /* Increased to ensure it's above other elements */
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 15px rgba(248, 193, 44, 0.4);
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .back-to-top.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .back-to-top:hover {
+                background: #fff;
+                color: var(--dark);
+                transform: translateY(-5px);
+            }
+
+            /* Ensure mobile styles don't override */
+            @media (max-width: 767px) {
+                .back-to-top {
+                    bottom: 15px;
+                    right: 15px;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1rem;
+                }
+
+                .back-to-top.active {
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
 
             /* Container padding */
@@ -1842,6 +2122,8 @@
                                 padding-left: 20px;
                                 padding-right: 20px;
                             }
+
+
                         }
                     }
                 }
@@ -1868,11 +2150,6 @@
                 disable: 'mobile'
             });
 
-            // Preloader
-            setTimeout(function () {
-                document.getElementById('preloader').style.display = 'none';
-            }, 800);
-
             // Navbar Scroll Effect
             const navbar = document.querySelector('.navbar');
             window.addEventListener('scroll', function () {
@@ -1883,14 +2160,24 @@
                 }
             });
 
-            // Back to top button
-            const backToTopBtn = document.querySelector('.back-to-top');
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > 300) {
-                    backToTopBtn.classList.add('active');
+
+            // Back to top button functionality
+            const backToTopButton = document.querySelector('.back-to-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('active');
                 } else {
-                    backToTopBtn.classList.remove('active');
+                    backToTopButton.classList.remove('active');
                 }
+            });
+
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
 
             // Close navbar on click (mobile)
