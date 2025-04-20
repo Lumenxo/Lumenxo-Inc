@@ -10,6 +10,8 @@
     <meta
         content="LumenXo delivers cutting-edge software solutions that transform business challenges into opportunities"
         name="description">
+    <!-- In your <head> section, make sure this tag is present and correct -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +56,8 @@
     <script>AOS.init();</script>
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         :root {
             --primary: #f8c12c;
@@ -1110,6 +1113,209 @@
                 transform: scale(1.05);
                 box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
             }
+
+            .navbar {
+                padding: 1rem 0;
+                transition: all 0.3s ease-in-out;
+                background-color: transparent;
+            }
+
+            .navbar.scrolled {
+                background-color: rgba(11, 11, 14, 0.95);
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+                padding: 0.5rem 0;
+                backdrop-filter: blur(10px);
+            }
+
+            .navbar-toggler {
+                border: none;
+                padding: 0.5rem;
+                color: var(--primary);
+                background-color: transparent;
+            }
+
+            .navbar-toggler:focus {
+                box-shadow: none;
+                outline: none;
+            }
+
+            .navbar-toggler i {
+                font-size: 1.5rem;
+            }
+
+            @media (max-width: 991px) {
+                .navbar {
+                    background-color: rgba(11, 11, 14, 0.95);
+                    padding: 0.5rem 0;
+                }
+
+                @media (max-width: 767px) {
+                    .navbar-collapse {
+                        background-color: rgba(11, 11, 14, 0.95);
+                        padding: 20px;
+                        border-radius: 10px;
+                        margin-top: 10px;
+                        backdrop-filter: blur(10px);
+                    }
+
+                    .navbar-nav {
+                        gap: 10px;
+                    }
+
+                    .nav-link {
+                        padding: 10px !important;
+                        border-radius: 5px;
+                    }
+
+                    .nav-link:hover {
+                        background-color: rgba(248, 193, 44, 0.1);
+                    }
+
+                    .hero-title {
+                        font-size: 2rem;
+                        letter-spacing: -1px;
+                    }
+
+                    .hero-text {
+                        font-size: 1rem;
+                    }
+
+                    .hero-section {
+                        padding-top: 100px;
+                        padding-bottom: 50px;
+                        min-height: auto;
+                    }
+
+                    .cube {
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    .cube-face {
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    .cube-face:nth-child(1) {
+                        transform: translateZ(100px);
+                    }
+
+                    .cube-face:nth-child(2) {
+                        transform: rotateY(180deg) translateZ(100px);
+                    }
+
+                    .cube-face:nth-child(3) {
+                        transform: rotateY(90deg) translateZ(100px);
+                    }
+
+                    .cube-face:nth-child(4) {
+                        transform: rotateY(-90deg) translateZ(100px);
+                    }
+
+                    .cube-face:nth-child(5) {
+                        transform: rotateX(90deg) translateZ(100px);
+                    }
+
+                    .cube-face:nth-child(6) {
+                        transform: rotateX(-90deg) translateZ(100px);
+                    }
+
+                    .btn-primary,
+                    .btn-outline {
+                        padding: 0.6rem 1.5rem;
+                        font-size: 0.9rem;
+                    }
+
+                    /* Mobile-specific fixes */
+                    @media (max-width: 767px) {
+
+                        /* Base layout fixes */
+                        body {
+                            overflow-x: hidden;
+                        }
+
+                        /* Navbar fixes */
+                        .navbar {
+                            background-color: rgba(11, 11, 14, 0.95) !important;
+                            padding: 10px 0 !important;
+                        }
+
+                        .navbar-brand {
+                            padding-left: 15px;
+                        }
+
+                        .navbar-toggler {
+                            margin-right: 15px;
+                        }
+
+                        /* Hero section fixes */
+                        .hero-section {
+                            padding: 80px 15px 40px !important;
+                            text-align: left;
+                        }
+
+                        .hero-title {
+                            font-size: 2rem !important;
+                            line-height: 1.2;
+                            margin-bottom: 15px;
+                            word-wrap: break-word;
+                        }
+
+                        .hero-text {
+                            font-size: 0.95rem !important;
+                            margin-bottom: 25px;
+                        }
+
+                        /* Button fixes */
+                        .btn-primary,
+                        .btn-outline {
+                            display: block;
+                            width: 100%;
+                            margin-bottom: 10px;
+                            text-align: center;
+                        }
+
+                        /* Make buttons appear in a column on mobile */
+                        .hero-buttons {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                        }
+
+                        /* Additional mobile fixes based on screenshot */
+                        @media (max-width: 767px) {
+
+                            /* Fix for the yellow line under "DIGITAL REALITY" */
+                            .hero-title span::after {
+                                height: 4px;
+                                bottom: 5px;
+                            }
+
+                            /* Layout for the buttons */
+                            .btn {
+                                padding: 12px 20px;
+                                border-radius: 50px;
+                                font-weight: 600;
+                                font-size: 0.9rem;
+                            }
+
+                            /* Fix for back to top button positioning */
+                            .back-to-top {
+                                bottom: 15px;
+                                right: 15px;
+                                width: 40px;
+                                height: 40px;
+                            }
+
+                            /* Fixed width container on small screens */
+                            .container {
+                                padding-left: 20px;
+                                padding-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     </style>
     <!-- AOS CSS -->
@@ -1128,44 +1334,83 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #000; padding: 0.7rem 0;">
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <!-- Replace 'assets/logo.svg' with your actual path -->
                 <img src="img/lumenxxxxo.svg" alt="LumenXo Logo" width="36" height="36" class="me-2"
                     style="filter: invert(1);" />
-                <span class="logo-text fw-bold fs-4 text-white">LumenXo</span>
+                <span class="logo-text">LumenXo</span>
             </a>
 
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-white"></i>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white px-3" href="#home">Home</a>
+                        <a class="nav-link active" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white px-3" href="#about">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white px-3" href="#services">Services</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white px-3" href="#portfolio">Portfolio</a>
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white px-3" href="#team">Team</a>
+                        <a class="nav-link" href="#team">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white px-3" href="#testimonials">Testimonials</a>
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white px-3" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/lumenxxxxo.svg" alt="LumenXo Logo" width="32" height="32" class="me-2"
+                    style="filter: invert(1);" />
+                <span class="logo-text" style="color: #f8c12c;">LumenXo</span>
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars" style="color: #f8c12c;"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -1175,20 +1420,23 @@
 
 
     <!-- Hero Section -->
-    <section class="hero-section" id="home">
-        <div class="floating-element float-1"></div>
-        <div class="floating-element float-2"></div>
-        <div class="floating-element float-3"></div>
-
+    <section id="home" class="hero-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-duration="1000">
-                    <h1 class="hero-title">Transforming Ideas Into <span>Digital Reality</span></h1>
-                    <p class="hero-text">We create innovative software solutions that empower businesses to thrive in
-                        the digital age. Our expertise turns your vision into impactful technology.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#contact" class="btn btn-primary">Get Started</a>
-                        <a href="#services" class="btn btn-outline">Our Services</a>
+                <div class="col-lg-6 col-md-12">
+                    <div class="hero-content">
+                        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                            TRANSFORM IDEAS INTO <span>DIGITAL REALITY</span>
+                        </h1>
+                        <p class="hero-text" data-aos="fade-up" data-aos-delay="200">
+                            We create innovative software solutions that empower businesses to thrive in the digital
+                            age.
+                            Our expertise turns your vision into impactful technology.
+                        </p>
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                            <a href="#contact" class="btn btn-primary me-lg-3">GET STARTED</a>
+                            <a href="#services" class="btn btn-outline mt-lg-0">OUR SERVICES</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
@@ -2157,6 +2405,82 @@
                     behavior: "smooth",
                     block: "start"
                 });
+            });
+        });
+    </script>
+    <script>
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === "#") return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        document.querySelector('.navbar-toggler').click();
+                    }
+
+                    // Smooth scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70, // Offset for navbar height
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scrolled class to navbar on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+            disable: 'mobile' // Disable animations on mobile for better performance
+        });
+
+        // Fix navbar behavior on mobile
+        document.addEventListener('DOMContentLoaded', function () {
+            // Close mobile menu when clicking a nav link
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarToggler.click();
+                    }
+                });
+            });
+
+            // Add scrolled class to navbar on page load if needed
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            }
+
+            // Add scrolled class on scroll
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    document.querySelector('.navbar').classList.add('scrolled');
+                } else {
+                    document.querySelector('.navbar').classList.remove('scrolled');
+                }
             });
         });
     </script>
