@@ -353,6 +353,75 @@
             perspective: 1000px;
             margin: 0 auto;
         }
+        /* Updated 3D Hero Model CSS */
+.hero-3d-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    perspective: 1200px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+}
+
+.cube {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg);
+    animation: rotate 20s infinite linear;
+}
+
+.cube-face {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(248, 193, 44, 0.1);
+    border: 2px solid var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--primary);
+    font-weight: 700;
+    text-align: center;
+    backface-visibility: visible;
+}
+
+.cube-face:nth-child(1) {
+    transform: translateZ(125px);
+}
+
+.cube-face:nth-child(2) {
+    transform: rotateY(180deg) translateZ(125px);
+}
+
+.cube-face:nth-child(3) {
+    transform: rotateY(90deg) translateZ(125px);
+}
+
+.cube-face:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(125px);
+}
+
+.cube-face:nth-child(5) {
+    transform: rotateX(90deg) translateZ(125px);
+}
+
+.cube-face:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(125px);
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg);
+    }
+}
 
         .cube {
             width: 300px;
@@ -1093,6 +1162,97 @@
                     opacity: 1;
                 }
             }
+            /* Improved mobile responsiveness */
+@media (max-width: 767px) {
+    /* Base layout fixes */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Navbar fixes */
+    .navbar {
+        background-color: rgba(11, 11, 14, 0.95) !important;
+        padding: 10px 0 !important;
+    }
+    
+    .navbar-brand {
+        padding-left: 15px;
+    }
+    
+    .navbar-toggler {
+        margin-right: 15px;
+    }
+    
+    .navbar-collapse {
+        background-color: rgba(11, 11, 14, 0.95);
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .navbar-nav {
+        padding: 10px;
+    }
+    
+    .nav-link {
+        padding: 12px 15px !important;
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+    
+    /* Hero section fixes */
+    .hero-section {
+        padding: 100px 15px 50px !important;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+    }
+    
+    .hero-text {
+        font-size: 1rem !important;
+    }
+    
+    /* Button layout fixes */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 100%;
+    }
+    
+    .btn-primary, .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Cube fixes for mobile */
+    .hero-3d-container {
+        width: 220px;
+        height: 220px;
+        margin-top: 40px;
+    }
+    
+    .cube {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .cube-face {
+        width: 180px;
+        height: 180px;
+        font-size: 1.2rem;
+    }
+    
+    .cube-face:nth-child(1) { transform: translateZ(90px); }
+    .cube-face:nth-child(2) { transform: rotateY(180deg) translateZ(90px); }
+    .cube-face:nth-child(3) { transform: rotateY(90deg) translateZ(90px); }
+    .cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(90px); }
+    .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(90px); }
+    .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(90px); }
+}
 
             /* Hover and Focus Animations */
             input:focus,
@@ -1329,6 +1489,7 @@
             once: true,
             mirror: false
         });
+        
     </script>
 
 </head>
@@ -2284,35 +2445,36 @@
 
     <!-- Custom JavaScript -->
     <script>
-        // Preloader
-        $(window).on('load', function () {
-            $('#preloader').fadeOut(1000);
-        });
-
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        });
-
-        // Navbar scroll effect
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 50) {
-                $('.navbar').addClass('scrolled');
-            } else {
-                $('.navbar').removeClass('scrolled');
-            }
-
-            // Back to top button
-            if ($(this).scrollTop() > 300) {
-                $('.back-to-top').addClass('active');
-            } else {
-                $('.back-to-top').removeClass('active');
-            }
-        });
-
+        // Add this JavaScript to fix the navbar closing issue
+$(document).ready(function() {
+    // Close navbar when nav items are clicked
+    $('.navbar-nav .nav-link').on('click', function() {
+      $('.navbar-collapse').collapse('hide');
+    });
+    
+    // Back to top button functionality
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 300) {
+        $('.back-to-top').addClass('active');
+      } else {
+        $('.back-to-top').removeClass('active');
+      }
+    });
+    
+    $('.back-to-top').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: 0}, 800);
+    });
+    
+    // Add scrolled class to navbar on scroll
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 100) {
+        $('.navbar').addClass('scrolled');
+      } else {
+        $('.navbar').removeClass('scrolled');
+      }
+    });
+  });
         // Smooth scrolling for nav links
         $('.navbar a, .footer-links a, .back-to-top').on('click', function (e) {
             if (this.hash !== '') {
