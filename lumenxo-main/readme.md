@@ -26,12 +26,10 @@ The site will be available at `http://localhost:5173`
 
 ## 🛠 Tech Stack
 
-- React 18
+- React 
 - TypeScript
 - Tailwind CSS
 - Framer Motion
-- Three.js
-- GSAP
 - Lucide Icons
 
 ## 🌟 Features
