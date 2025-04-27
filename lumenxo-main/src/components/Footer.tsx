@@ -145,11 +145,11 @@ const Footer: React.FC = () => {
                 },
                 { 
                   icon: <Mail size={20} />, 
-                  content: 'info@lumenxo.com'
+                  content: 'info.lumenxo@gmail.com'
                 },
                 { 
                   icon: <Phone size={20} />, 
-                  content: '+91-7XXXX-XXXX'
+                  content: '+91-76569-18304'
                 }
               ].map((item, index) => (
                 <li key={index} className="flex">
