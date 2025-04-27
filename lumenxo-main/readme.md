@@ -77,4 +77,4 @@ src/
 
 ## 📞 Contact
 
-- Website: [https://lumenxo-inc.netlify.app](https://lumenxo.com)
+- Website: [https://lumenxo.com](https://lumenxo.com)
