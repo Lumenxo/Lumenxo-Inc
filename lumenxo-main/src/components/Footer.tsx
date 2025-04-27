@@ -42,11 +42,11 @@ const Footer: React.FC = () => {
             
             <div className="flex space-x-4">
               {[
-                { icon: <Facebook size={18} />, href: '#' },
-                { icon: <Twitter size={18} />, href: '#' },
-                { icon: <Linkedin size={18} />, href: '#' },
-                { icon: <Instagram size={18} />, href: '#' },
-                { icon: <Github size={18} />, href: '#' }
+                { icon: <Facebook size={18} />, href: 'https://tr.ee/jc-asK8gLf' },
+                { icon: <Twitter size={18} />, href: 'https://tr.ee/Y9QrB5G1py' },
+                { icon: <Linkedin size={18} />, href: 'https://www.linkedin.com/company/lumenxo/' },
+                { icon: <Instagram size={18} />, href: 'https://www.instagram.com/lumenxo__?igsh=dXdldWc0ZTZjdjZ2' },
+                // { icon: <Github size={18} />, href: '#' }
               ].map((social, index) => (
                 <motion.a
                   key={index}
