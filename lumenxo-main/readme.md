@@ -70,24 +70,6 @@ src/
 - Testimonials
 - Contact
 
-## 🔧 Development
-
-To start development:
-
-1. Make code changes
-2. Run development server: `npm run dev`
-3. Build for production: `npm run build`
-4. Preview production build: `npm run preview`
-
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/YourFeature`
-3. Commit your changes: `git commit -m 'Add YourFeature'`
-4. Push to the branch: `git push origin feature/YourFeature`
-5. Open a pull request
-
 
 ## 👥 Team
 
@@ -95,4 +77,4 @@ To start development:
 
 ## 📞 Contact
 
-- Website: [https://lumenxo-inc.netlify.app](https://lumenxo-inc.netlify.app)
+- Website: [https://lumenxo-inc.netlify.app](https://lumenxo.com)
