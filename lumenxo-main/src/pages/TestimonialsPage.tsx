@@ -23,7 +23,7 @@ const TestimonialsPage = () => {
       id: 3,
       quote: "LUMENXO transformed our vision into a sleek, high-performing digital platform. Their team is fast, communicative, and incredibly skilled. We've seen noticeable growth since launch.",
       name: "Smruti Suman Badjena",
-      position: "Founder, ThreatArena",
+      position: "Team Lead, CyberSecurity Club, GIETU",
       avatarBg: "bg-green-600"
     },
     {
