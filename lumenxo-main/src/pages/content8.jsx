@@ -30,7 +30,7 @@ export default function GrowingWithUs() {
             key={index}
             src={partner.logo}
             alt={partner.name}
-            className="m-0 h-36 rounded-full object-cover absolute top-4"
+            className="m-0 w-36 h-36 object-contain absolute top-4"
             initial={{ x: "100vw" }}
             animate={{ x: "-200px" }}
             transition={{
