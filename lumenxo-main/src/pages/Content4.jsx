@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -84,12 +85,12 @@ const ServicesFlipCardsWithBackground = () => {
           ))}
         </div>
 
-        <button
+        <Link
           className="get-services-btn"
           onClick={() => window.location.href = '/Services'}
         >
           Get Services →
-        </button>
+        </Link>
       </div>
     </Wrapper>
   );
