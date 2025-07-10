@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import heroImage from '../Assets/download.svg';
+import { Link } from 'react-router-dom';
 
 export default function HeroSection() {
   return (
@@ -39,7 +40,7 @@ export default function HeroSection() {
             exceptional user experiences.
           </motion.p>
 
-          <motion.button
+          <Link
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
@@ -50,7 +51,7 @@ export default function HeroSection() {
           >
             Talk to Our Experts
             <span className="text-xl">&rarr;</span>
-          </motion.button>
+          </Link>
         </div>
 
         {/* Image Section */}
