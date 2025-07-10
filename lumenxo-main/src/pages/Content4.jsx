@@ -53,7 +53,7 @@ const ServicesFlipCardsWithBackground = () => {
           </p>
         </div>
 
-        <div className="cards">
+        <div className="cards mb-10">
           {services.map((service, i) => (
             <div className="flip-card" key={i}>
               <div className="flip-card-inner">
@@ -87,7 +87,7 @@ const ServicesFlipCardsWithBackground = () => {
 
         <Link
           className="get-services-btn"
-          onClick={() => window.location.href = '/Services'}
+          to="/Services"
         >
           Get Services →
         </Link>
