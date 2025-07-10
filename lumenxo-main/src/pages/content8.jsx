@@ -24,13 +24,13 @@ export default function GrowingWithUs() {
         collaboration with us.
       </p>
 
-      <div className="overflow-hidden w-full h-40 relative">
+      <div className="overflow-hidden flex gap-5 w-full h-40 relative">
         {partners.map((partner, index) => (
           <motion.img
             key={index}
             src={partner.logo}
             alt={partner.name}
-            className="w-36 m-0 h-36 rounded-full object-cover absolute top-4"
+            className="m-0 h-36 rounded-full object-cover absolute top-4"
             initial={{ x: "100vw" }}
             animate={{ x: "-200px" }}
             transition={{
