@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaPhoneAlt,FaLink  , FaMapMarkerAlt, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { FaEnvelope, FaPhoneAlt, FaLink, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { BsWhatsapp } from 'react-icons/bs'; 
 
@@ -63,19 +63,26 @@ const socialLinks = [
     hoverColor: 'hover:from-blue-700 hover:to-blue-800',
     url: 'https://www.facebook.com/people/LumenXo-Inc/61573160147922/?rdid=Q108uaz8L7Wak14j&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19KfLtjtA2%2F'
   },
-  // {
-  //   icon: <FaTwitter />,
-  //   name: 'Twitter',
-  //   color: 'from-sky-500 to-sky-600',
-  //   hoverColor: 'hover:from-sky-600 hover:to-sky-700',
-  //   url: '#'
-  // },
   {
-    icon: <FaLink />,
-    name: 'LinkTree',
+    icon: <FaTwitter />,
+    name: 'Twitter',
+    color: 'from-blue-500 to-blue-700',
+    hoverColor: 'hover:from-blue-600 hover:to-blue-800',
+    url: 'https://x.com/Lumenxoinc',
+  },
+  {
+    icon: <FaInstagram />,
+    name: 'Instagram',
     color: 'from-pink-500 to-rose-600',
     hoverColor: 'hover:from-pink-600 hover:to-rose-700',
-    url: 'https://x.com/Lumenxoinc'
+    url: 'https://www.instagram.com/lumenxo__/',
+  },
+  {
+    icon: <FaYoutube />,
+    name: 'YouTube',
+    color: 'from-red-500 to-red-700',
+    hoverColor: 'hover:from-red-600 hover:to-red-800',
+    url: 'https://www.youtube.com/@Lumenxo',
   },
   {
     icon: <FaLinkedinIn />,
@@ -86,7 +93,7 @@ const socialLinks = [
   },
   {
     icon: <BsWhatsapp />, 
-     name: 'WhatsApp', 
+    name: 'WhatsApp', 
     color: 'from-green-600 to-green-700',
     hoverColor: 'hover:from-green-700 hover:to-green-800',
     url: 'https://www.whatsapp.com/channel/0029VaxwsYuJUM2jam4hDZ12'
@@ -95,19 +102,19 @@ const socialLinks = [
 
 export default function ContactInfo() {
   return (
+    <>
     <section className="relative py-20 px-6 overflow-hidden">
-      {/* Background Image with Overlay */}
+    
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('https://tse2.mm.bing.net/th/id/OIP.ereU3u30vDuTpuSKAIRt4AAAAA?cb=thvnextc2&w=474&h=316&rs=1&pid=ImgDetMain&o=7&rm=3')`
         }}
       >
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
-      {/* Curved Design Element */}
+
       <div className="absolute top-0 left-0 w-full h-full">
         <svg
           className="absolute top-0 left-0 w-full h-full"
@@ -122,7 +129,7 @@ export default function ContactInfo() {
       </div>
 
       <div className="relative max-w-6xl mx-auto">
-        {/* Section Header */}
+ 
         <motion.div
           className="text-center mb-16"
           initial="hidden"
@@ -159,7 +166,6 @@ export default function ContactInfo() {
           </motion.p>
         </motion.div>
 
-        {/* Contact Cards */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
           initial="hidden"
@@ -167,7 +173,7 @@ export default function ContactInfo() {
           viewport={{ once: true, amount: 0.2 }}
           variants={containerVariants}
         >
-          {/* Email */}
+      
           <motion.div
             variants={itemVariants}
             whileHover={{ 
@@ -177,14 +183,13 @@ export default function ContactInfo() {
             className="group"
           >
             <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 text-center h-full">
-              {/* Icon Container */}
+            
               <div className="flex justify-center mb-6">
                 <div className="p-4 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl shadow-lg">
                   <FaEnvelope className="text-white text-2xl" />
                 </div>
               </div>
 
-              {/* Content */}
               <h4 className="text-xl font-bold text-gray-800 mb-3">
                 Email Us
               </h4>
@@ -195,7 +200,7 @@ export default function ContactInfo() {
             </div>
           </motion.div>
 
-          {/* Phone */}
+        
           <motion.div
             variants={itemVariants}
             whileHover={{ 
@@ -205,14 +210,14 @@ export default function ContactInfo() {
             className="group"
           >
             <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 text-center h-full">
-              {/* Icon Container */}
+             
               <div className="flex justify-center mb-6">
                 <div className="p-4 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl shadow-lg">
                   <FaPhoneAlt className="text-white text-2xl" />
                 </div>
               </div>
 
-              {/* Content */}
+            
               <h4 className="text-xl font-bold text-gray-800 mb-3">
                 Call Us
               </h4>
@@ -223,7 +228,7 @@ export default function ContactInfo() {
             </div>
           </motion.div>
 
-          {/* Location */}
+  
           <motion.div
             variants={itemVariants}
             whileHover={{ 
@@ -233,14 +238,14 @@ export default function ContactInfo() {
             className="group"
           >
             <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 text-center h-full">
-              {/* Icon Container */}
+         
               <div className="flex justify-center mb-6">
                 <div className="p-4 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl shadow-lg">
                   <FaMapMarkerAlt className="text-white text-2xl" />
                 </div>
               </div>
 
-              {/* Content */}
+           
               <h4 className="text-xl font-bold text-gray-800 mb-3">
                 Visit Us
               </h4>
@@ -252,7 +257,7 @@ export default function ContactInfo() {
           </motion.div>
         </motion.div>
 
-        {/* Follow Us Section */}
+  
         <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 30 }}
@@ -303,13 +308,11 @@ export default function ContactInfo() {
                 <div className="text-xl">
                   {social.icon}
                 </div>
-                
-                {/* Tooltip */}
+              
                 <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                   {social.name}
                 </div>
-                
-                {/* Ripple Effect */}
+               
                 <motion.div
                   className="absolute inset-0 rounded-full border-2 border-white/30 opacity-0 group-hover:opacity-100"
                   initial={{ scale: 0.8, opacity: 0 }}
@@ -325,5 +328,6 @@ export default function ContactInfo() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }

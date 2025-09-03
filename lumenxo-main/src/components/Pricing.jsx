@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../pages/Navbar';
+import { Link } from 'react-router-dom';
 
 export default function Pricing() {
   const [posts, setPosts] = useState([]);
@@ -11,7 +12,7 @@ export default function Pricing() {
       .then((res) => res.json())
       .then((data) => {
         if (data.items) {
-          setPosts(data.items.slice(0, 3)); // take first 3 posts
+          setPosts(data.items.slice(0, 3));
         }
       })
       .catch(console.error);
@@ -48,27 +49,27 @@ export default function Pricing() {
                 <p className="text-xs text-gray-500 mb-4">
                   {new Date(post.pubDate).toLocaleDateString()}
                 </p>
-                <a
-                  href={post.link}
+                <Link
+                  to={post.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-indigo-400 hover:underline text-sm font-medium"
                 >
                   Read Full →
-                </a>
+                </Link>
               </div>
             ))}
           </div>
 
           <div className="mt-12">
-            <a
-              href="https://medium.com/@inc.lumenxo"
+            <Link
+              to="https://medium.com/@inc.lumenxo"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-violet-600 hover:bg-violet-700 text-white px-6 py-3 rounded-lg text-sm font-semibold transition"
             >
               View More on Medium →
-            </a>
+            </Link>
           </div>
         </div>
       </div>

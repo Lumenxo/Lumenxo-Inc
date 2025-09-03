@@ -16,19 +16,23 @@ export default function StatsSection() {
   });
 
   return (
-    <section className="bg-white py-16 px-6" ref={ref}>
-      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+    <section
+      ref={ref}
+      className="py-16 px-6 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url('https://static.vecteezy.com/system/resources/thumbnails/000/681/085/small_2x/futuristic-mechanical-gears-background.jpg')`,
+         
+
+      }}
+    >
+      <div className=" rounded-xl max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center p-6">
         {stats.map((stat, index) => (
           <div key={index} className="flex flex-col items-center">
-            <h3 className="text-4xl font-extrabold text-indigo-600">
-              {inView ? (
-                <CountUp end={stat.number} duration={2} />
-              ) : (
-                0
-              )}
+            <h3 className="text-4xl font-extrabold text-white">
+              {inView ? <CountUp end={stat.number} duration={2} /> : 0}
               {stat.suffix}
             </h3>
-            <p className="text-gray-700 text-sm mt-2 font-medium">{stat.label}</p>
+            <p className="text-white text-sm mt-2 font-medium">{stat.label}</p>
           </div>
         ))}
       </div>

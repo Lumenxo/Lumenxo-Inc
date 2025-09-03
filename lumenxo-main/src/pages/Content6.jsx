@@ -26,9 +26,15 @@ const features = [
 
 export default function WhyLumenXo() {
   return (
-    <section className="py-20 px-6 bg-white">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        {/* Left Side Image */}
+    <section
+      className="py-20 px-6 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url('https://wallpapercave.com/wp/wp1867873.jpg')`,
+      }}
+    >
+ 
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12   p-8 rounded-xl">
+      
         <div className="md:w-1/2">
           <img
             src="https://static.live.templately.com/woocommerce/2021/08/Illustration3-min.png"
@@ -37,15 +43,13 @@ export default function WhyLumenXo() {
           />
         </div>
 
-        {/* Right Side Content */}
         <div className="md:w-1/2">
-          {/* Heading Section */}
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Why LumenXo</h2>
-          <p className="text-gray-600 mb-8">
+       
+          <h2 className="text-4xl font-bold text-white mb-4">Why LumenXo</h2>
+          <p className="text-white mb-8">
             At LumenXo, we combine innovation, creativity, and technology to deliver solutions that exceed expectations.
           </p>
 
-          {/* Feature Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {features.map((item, idx) => (
               <div

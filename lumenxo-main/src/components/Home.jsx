@@ -11,20 +11,26 @@ import Content6 from '../pages/Content6'
 import Testimonial from '../pages/testimonialsection'
 
 import Content8 from '../pages/content8.jsx'
+import LumenIntro from './LumenIntro.jsx'
+import GallerySlider from '../pages/Gallery.jsx'
+import FeatureIn from '../pages/FeaturedIn.jsx'
 
 const Home = () => {
   return (
     <div>
       <Navbar/>
       <Content1/>
+      <LumenIntro/>
       <Content3/>
-       
+      
        <Content5/>
        
       <Content2/>
      <Content6/>
-    
       <Content4/>
+      <FeatureIn/>
+       <GallerySlider/>
+        
       <Content8/>
       <Testimonial/>
       <ContactUs/>

@@ -187,20 +187,20 @@ const SingleTestimonial = ({ image, name, position, details }) => {
         whileHover={{ y: -5 }}
         transition={{ duration: 0.3 }}
       >
-        {/* Gradient Border Effect */}
+     
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300 blur-sm" />
         
-        {/* Main Content */}
+   
         <div className="relative p-8 md:p-12">
           <div className="flex flex-col lg:flex-row items-center gap-8">
-            {/* Profile Section */}
+        
             <div className="flex-shrink-0 text-center lg:text-left">
               <motion.div
                 className="relative inline-block"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                {/* Profile Image */}
+              
                 <div className="relative w-32 h-32 mx-auto lg:mx-0">
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full animate-pulse opacity-20"></div>
                   <img 
@@ -208,8 +208,7 @@ const SingleTestimonial = ({ image, name, position, details }) => {
                     alt={name} 
                     className="relative w-full h-full object-cover rounded-full border-4 border-white shadow-lg"
                   />
-                  
-                  {/* Verified Badge */}
+                
                   <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg">
                     <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -217,12 +216,12 @@ const SingleTestimonial = ({ image, name, position, details }) => {
                   </div>
                 </div>
                 
-                {/* Name and Position */}
+               
                 <div className="mt-4">
                   <h4 className="text-xl font-bold text-gray-800 mb-1">{name}</h4>
                   <p className="text-sm text-indigo-600 font-medium">{position}</p>
                   
-                  {/* Star Rating */}
+                 
                   <div className="flex justify-center lg:justify-start gap-1 mt-2">
                     {[...Array(5)].map((_, i) => (
                       <FaStar key={i} className="text-yellow-400 text-sm" />
@@ -232,9 +231,8 @@ const SingleTestimonial = ({ image, name, position, details }) => {
               </motion.div>
             </div>
 
-            {/* Testimonial Content */}
             <div className="flex-1 text-center lg:text-left">
-              {/* Quote Icon */}
+          
               <motion.div
                 className="inline-block mb-4"
                 initial={{ scale: 0, rotate: -180 }}
@@ -245,7 +243,7 @@ const SingleTestimonial = ({ image, name, position, details }) => {
                 <FaQuoteLeft className="text-3xl text-indigo-300" />
               </motion.div>
               
-              {/* Testimonial Text */}
+              
               <motion.p 
                 className="text-gray-700 text-lg leading-relaxed mb-6 italic"
                 initial={{ opacity: 0, y: 20 }}
@@ -256,7 +254,7 @@ const SingleTestimonial = ({ image, name, position, details }) => {
                 "{details}"
               </motion.p>
               
-              {/* Accent Line */}
+            
               <motion.div
                 className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mx-auto lg:mx-0"
                 initial={{ width: 0 }}

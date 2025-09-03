@@ -27,7 +27,7 @@ export default function TechnologiesSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-white via-slate-50 to-violet-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative">
-        {/* Left: Images */}
+    
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -35,7 +35,7 @@ export default function TechnologiesSection() {
           transition={{ duration: 0.6 }}
           className="relative w-full"
         >
-          {/* Main Image (visible on all sizes) */}
+        
           <div className="rounded-xl overflow-hidden shadow-xl border border-violet-200">
             <img
               src="https://www.upkeepmarketing.com/wp-content/uploads/2023/02/Untitled-design-6-min-1024x922.png"
@@ -44,7 +44,6 @@ export default function TechnologiesSection() {
             />
           </div>
 
-          {/* Overlapping Image (only on md and above) */}
           <div className="hidden md:block absolute bottom-[-40px] right-[-40px] w-[60%] max-w-[280px] rounded-xl overflow-hidden shadow-2xl border border-purple-200 bg-white z-20">
             <img
               src="https://technoshrine.com/TS/wp-content/uploads/2023/12/overview_img02.jpg"
@@ -54,7 +53,6 @@ export default function TechnologiesSection() {
           </div>
         </motion.div>
 
-        {/* Right: Content */}
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
