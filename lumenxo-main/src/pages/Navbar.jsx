@@ -11,6 +11,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from 'react-icons/fa';
+import Logo from "../Assets/logo.png"
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -84,21 +85,15 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16 lg:h-20">
 
             <motion.div
-              className="flex items-center group cursor-pointer"
+              className="flex items-center justify-center group cursor-pointer"
               whileHover={{ scale: 1.05 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
               <img
-                src="https://bing.com/th/id/OIP.3pHyhWedLbR9iGYTQq76EgAAAA?o=7&cb=thvnextc2rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                src={Logo}
                 alt="LumenXo Logo"
-                className="h-10 w-10 lg:h-12 lg:w-12 object-cover rounded-full border border-gray-300 shadow"
+                className="relative top-1 w-40 object-cover"
               />
-              <div className="ml-3">
-                <span className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
-                  LumenXo
-                </span>
-                <p className="text-xs font-medium text-gray-600">Software Pvt. Ltd.</p>
-              </div>
             </motion.div>
 
          
