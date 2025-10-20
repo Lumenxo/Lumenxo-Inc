@@ -287,14 +287,14 @@ const testimonials = [
     details:
       "From the first meeting to final delivery, LUMENXO exceeded our expectations. Their custom software streamlined our workflow and boosted productivity across departments. The ongoing support has been exceptional.",
   },
-  {
+  /*{
     image:
       "https://thumbs.dreamstime.com/b/male-avatar-portrait-young-man-beard-vector-illustration-male-character-modern-color-style-male-avatar-portrait-307687004.jpg",
     name: "Smruti Suman Badjena",
     position: "Founder, ThreatArena",
     details:
       "LUMENXO transformed our vision into a sleek, high-performing digital platform. Their team is fast, communicative, and incredibly skilled. We've seen noticeable growth since launch and couldn't be happier with the results.",
-  },
+  },*/
   {
     image:
       "https://img.freepik.com/premium-vector/man-male-character-avatar-vector-portrait-businessman-type-clothes_491904-56.jpg?w=2000",
