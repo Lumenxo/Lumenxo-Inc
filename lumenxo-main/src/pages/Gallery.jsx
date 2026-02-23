@@ -4,6 +4,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Img1 from "../Assets/c1.jpg";
 import Img2 from "../Assets/c2.jpg";
+import Img3 from "../Assets/hacknovation/1.jpeg";
+import Img4 from "../Assets/hacknovation/7.jpeg";
 
 const galleryItems = [
   {
@@ -29,6 +31,87 @@ As the keynote speaker, Co-Founder Kalyan Kumar Das shared his insights and expe
 At the conclusion, the Principal of Gandhi Public School expressed heartfelt gratitude to LumenXo Software Pvt. Ltd., appreciating their excellent and timely initiative. He stated, “In today’s times, education along with knowledge of cyber safety is equally important. This programme has been extremely informative for our teachers, students, and staff. We will always welcome such initiatives in the future.”
 
 With active participation from everyone, encouragement from the school family, and the dedicated efforts of LumenXo Software Pvt. Ltd., the programme concluded successfully.`,
+  },
+  {
+    img: Img3,
+    title: "🚀 TechSprint Hackathon - GDG on Campus, GIET University",
+    description: `
+Innovation Meets Collaboration | 2025
+LumenXo Software served as the title sponsor for TechSprint, a dynamic hackathon organized by the Google Developer Group on Campus at GIET University Gunupur, fostering a culture of innovation and collaborative problem-solving among student developers.
+Event Overview:
+    • Organizer: GDG on Campus - GIET University Gunupur
+    • Format: Competitive hackathon with team-based challenges
+    • Focus Areas: Web development, mobile apps, AI/ML, and emerging technologies
+    • Outcome: Working prototypes and innovative tech solutions
+Our Contribution: As the primary sponsor, LumenXo provided:
+    • Complete event funding and logistics support
+    • Technical mentorship from our experienced team
+    • Prize distribution and recognition
+    • Industry insights on current technology trends
+    • Career guidance for aspiring developers
+Strategic Partnership: Beyond TechSprint, we formalized our commitment through a two-year Memorandum of Understanding (MoU) with GDG on Campus - GIET University Gunupur, aimed at creating sustained value for students through:
+✓ Regular Technical Workshops — Hands-on training in modern development tools and practices
+✓ Industry Training Programs — Bridging academic learning with professional requirements
+✓ Technical Services & Mentorship — Real-world project experience and career guidance 
+✓ Skill Development Initiatives — Job-ready skills in emerging technologies
+Why We Invest in Education
+Building the Academia-Industry Bridge
+The gap between academic learning and industry requirements is real. Students graduate with theoretical knowledge but often lack practical, hands-on experience with current technologies and real-world problem-solving scenarios.
+Our Mission: To bridge this gap by:
+    1. Providing Real-World Exposure — Through hackathons, workshops, and projects
+    2. Industry Mentorship — Connecting students with experienced professionals
+    3. Practical Skill Development — Teaching tools and frameworks actually used in industry
+    4. Career Pathway Creation — Opening doors to internships and employment opportunities
+The LumenXo Approach to Education Partnership
+We Don't Just Sponsor—We Participate:
+    • Our team members serve as mentors and judges
+    • We share real industry challenges for students to solve
+    • We provide technical guidance throughout events
+    • We maintain ongoing relationships, not one-time engagements
+Focus on Long-Term Impact:
+    • Multi-year partnerships with educational institutions
+    • Structured training programs, not just one-off events
+    • Alumni network development
+    • Job placement and internship opportunities
+The Impact: By the Numbers
+Student Reach
+    • 550+ students directly engaged through hackathons
+    • 1,000+ students impacted through our GDG partnership
+    • Multiple institutions across Odisha
+Skills Development
+    • 20+ technical workshops planned under MoU
+    • 100+ hours of industry mentorship provided
+    • Real-world project experience for participants
+Community Building
+    • Gunupur, Odisha tech ecosystem strengthening
+    • Regional innovation hub development
+    • Industry-academia collaboration model
+    `
+  },
+  {
+    img: Img4,
+    title: "🏆 Hacknovation 2.0 - GIET University Gunupur",
+    description: `
+    36-Hour Innovation Marathon | January 2026
+LumenXo Software proudly partnered with GIET University Gunupur as a sponsor for Hacknovation 2.0, a premier hackathon that brought together ambitious students, industry mentors, and innovation leaders for an intensive 36-hour coding marathon.
+Event Highlights:
+    • Duration: 36 hours of continuous innovation
+    • Participants: Student teams from across multiple disciplines
+    • Focus: Real-world problem solving through technology
+    • Evaluation: Industry-standard assessment by global experts
+Distinguished Jury Panel: The event featured exceptional external experts who brought global perspective and rigorous evaluation standards:
+    • Mr. Bala Yellapantula — Technical Program Manager, Bio-Rad Laboratories, California
+    • Mr. Ravi Kishore — Senior Technical Architect, HCL Tech, Hyderabad
+    • Dr. Ramaraju Poosapati — Head of Enterprise Architecture, UK BFSI Client, TCS
+    • Suman Varma — Senior Technical Lead (RPA), TCS
+Our Impact: Through our sponsorship and the personal involvement of our Co-Founder Mr. Kalyan Kumar Dash, we provided:
+    • Financial support for event infrastructure
+    • Industry mentorship and technical guidance
+    • Real-world problem statements
+    • Networking opportunities for participants
+    • Recognition for innovative solutions
+Grand Felicitation Ceremony: The event concluded with a prestigious ceremony honoring excellence in innovation, attended by university leadership including Prof. AVNL Sharma (Honorable Vice Chancellor), Dr. N.V. Jagannadha Rao (Registrar), and other distinguished academics.
+    `
   },
 ];
 

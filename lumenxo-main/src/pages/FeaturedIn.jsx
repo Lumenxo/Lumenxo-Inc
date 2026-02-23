@@ -1,10 +1,20 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Img1 from "../Assets/new1.jpg";
+import Img3 from "../Assets/hacknovation/2.jpeg";
+import Img4 from "../Assets/hacknovation/3.jpeg";
+import Img5 from "../Assets/hacknovation/4.jpeg";
+import Img6 from "../Assets/hacknovation/5.jpeg";
+import Img7 from "../Assets/hacknovation/6.jpeg";
 
 const FeaturedIn = () => {
   const newspapers = [
     { name: "Sambad", logo: Img1 },
+    { name: "Sambad", logo: Img3 },
+    { name: "Sambad", logo: Img4 },
+    { name: "Sambad", logo: Img5 },
+    { name: "Sambad", logo: Img6 },
+    { name: "Sambad", logo: Img7 },
     // add more newspapers here
   ];
 
